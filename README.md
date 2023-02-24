@@ -19,7 +19,7 @@ Add the new token as an action secret to your repository. Conventionally, we cal
 
 ## 3. 💌 Install the Captain CLI and call it when running tests
 
-See the [full documentation on test suite integration][test-suite-integration]. Use a glob for your output files since `unittest-xml-reporting` will write multiple files by default. You'll also need to specify `--language Python` and ``framework unittest` to inform the Captain CLI about how to interpret the test result files.
+See the [full documentation on test suite integration][test-suite-integration]. Use a glob when specifying `--test-results` since `unittest-xml-reporting` will write multiple files by default. You'll also need to specify `--language Python` and `--framework unittest` to inform the Captain CLI about how to interpret the test result files.
 
 ```yaml
 - uses: rwx-research/setup-captain@v1
