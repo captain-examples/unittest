@@ -22,6 +22,8 @@ jobs:
             --test-results tmp/*.xml \
             --language Python \
             --framework unittest \
+            --retries 3 \
+            --retry-command "python -m xmlrunner {{ tests }} -o tmp" \
             -- python -m xmlrunner -o tmp
         env:
           RWX_ACCESS_TOKEN: ${{ secrets.RWX_ACCESS_TOKEN }}
