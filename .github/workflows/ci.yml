@@ -1,0 +1,27 @@
+name: "Captain CI example"
+on:
+  pull_request:
+  push:
+    paths-ignore:
+      - README.md
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: "3.10"
+          cache: "pip" # caching pip dependencies
+      - run: pip install -r requirements.txt
+      - uses: rwx-research/setup-captain@v1
+      - name: Run tests
+        run: |
+          captain run \
+            --suite-id captain-examples-unittest \
+            --test-results tmp/*.xml \
+            --language Python \
+            --framework unittest \
+            -- python -m xmlrunner -o tmp
+        env:
+          RWX_ACCESS_TOKEN: ${{ secrets.RWX_ACCESS_TOKEN }}
