@@ -39,8 +39,8 @@ See the [full documentation on test suite integration][test-suite-integration]. 
 
 Take a look at the [final workflow!][workflow-with-captain]
 
-[workflow-before-captain]: https://github.com/captain-examples/pytest/blob/basic-workflow/.github/workflows/ci.yml
+[workflow-before-captain]: https://github.com/captain-examples/unittest/blob/basic-workflow/.github/workflows/ci.yml
 [captain]: https://account.rwx.com/deep_link/manage/access_tokens
 [create-access-token]: https://www.rwx.com/docs/access-tokens
-[workflow-with-captain]: https://github.com/captain-examples/pytest/blob/main/.github/workflows/ci.yml
+[workflow-with-captain]: https://github.com/captain-examples/unittest/blob/main/.github/workflows/ci.yml
 [test-suite-integration]: https://www.rwx.com/captain/docs/test-suite-integration
