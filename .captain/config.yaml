@@ -1,0 +1,7 @@
+test-suites:
+  captain-examples-unittest:
+    command: python -m xmlrunner -o tmp
+    results:
+      language: Python
+      framework: unittest
+      path: tmp/*.xml
