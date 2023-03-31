@@ -16,12 +16,6 @@ jobs:
       - run: pip install -r requirements.txt
       - uses: rwx-research/setup-captain@v1
       - name: Run tests
-        run: |
-          captain run \
-            --suite-id captain-examples-unittest \
-            --test-results tmp/*.xml \
-            --language Python \
-            --framework unittest \
-            -- python -m xmlrunner -o tmp
+        run: captain run captain-examples-unittest
         env:
           RWX_ACCESS_TOKEN: ${{ secrets.RWX_ACCESS_TOKEN }}
